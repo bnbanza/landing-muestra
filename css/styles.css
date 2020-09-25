@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    
+}
+header {
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    height: auto;
+    padding: 48px;
+    width: 100%;
+    background-size: cover;
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffff;
+    display: inline-block;
+    
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+    width: auto;
+}
+
+img {
+    display: block;
+    width: 500px;
+    height: 450px;
+    animation: upMove 1s ease-in;
+}
+
+.text {
+    color: white;
+    width: 50%;
+}
+
+.text h1 {
+    font-size: 75px;
+    animation: rightMove 1s ease-in;
+}
+.text h2 {
+    font-size: 30px;
+    animation: leftMove 1s ease-in;
+}
+
+.text a {
+    text-decoration: none;
+    display: inline-block;
+    color: #ffff;
+    border: 1px solid #ffff;
+    width: 150px;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-radius: 5px;   
+    font-weight: 400;
+    text-align: center;
+    animation: upMove 1s ease-in;
+}
+
+.wave {
+    height: 100px;
+    width: 100%;
+    background: #12c2e9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.one {
+    -webkit-clip-path: circle(0% at 0 0);
+    clip-path: circle(0% at 0 0);
+}
+
+.icon {
+    animation: leftMove 1s ease-in;
+    z-index: 100;
+    color: #fff;
+}
+
+.icon:hover {
+    cursor: pointer;
+}
+
+.links {
+    position: fixed;
+    display: flex;
+    top: 0;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    background-color: black;
+    transition: all 1s ease;
+    background: #c0392b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #c0392b, #8e44ad);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right,#c0392b, #8e44ad); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+
+}
+
+.two {
+    -webkit-clip-path: circle(150% at 0 0);
+    clip-path: circle(150% at 0 0);
+}
+
+@keyframes leftMove {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes rightMove {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes upMove {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@media(max-width: 1000px) {
+    .text h1 {
+        font-size: 65px;
+    }
+    img {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media(max-width: 720px) {
+    .text h1 {
+        font-size: 50px;
+    }
+    .text h2 {
+        font-size: 20px;
+    }
+    img {
+        width: 250px;
+    }
+}
+
+@media(max-width: 500px) {
+    header {
+        padding: 35px;
+    }
+    .container {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .text {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .text h1 {
+        font-size: 45px;
+    }
+    .text h2 {
+        font-size: 20px;
+    
+    }
+} 
+
+
+@media(max-width: 340px) {
+    .container {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+    .text {
+        text-align: center;
+    }
+        
+    .text h1 {
+        font-size: 35px;
+    }
+    .text h2 {
+        font-size: 15px;
+       
+    }
+    img {
+        height: 200px;
+    }
+}
+    
